@@ -9,3 +9,6 @@ pyautogui demo with and without display
 ## Run
 
 `python gui_demo.py`
+
+- visible=True (with display)
+- visible=False (wo display)
