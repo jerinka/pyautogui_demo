@@ -1,0 +1,6 @@
+python-xlib
+PyVirtualDisplay
+pyscreenshot
+# pillow
+selenium
+pyautogui
