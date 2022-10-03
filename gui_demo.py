@@ -11,7 +11,7 @@ window_width = 1200
 window_height = 800
 
 # PyVirtualDisplay
-display = SmartDisplay(visible=True, size=(window_width, window_height))
+display = SmartDisplay(visible=False, size=(window_width, window_height))
 display.start()
 
 # PyAutoGUI
