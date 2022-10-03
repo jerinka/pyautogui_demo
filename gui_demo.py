@@ -6,6 +6,9 @@ import pyautogui
 import Xlib.display
 from easyprocess import EasyProcess
 from pyvirtualdisplay.smartdisplay import SmartDisplay
+import cv2
+import sys
+python = sys.executable
 
 window_width = 1200
 window_height = 800
@@ -21,18 +24,16 @@ pyautogui._pyautogui_x11._display = Xlib.display.Display(os.environ['DISPLAY'])
 pyautogui_window_width, pyautogui_window_height = pyautogui.size()
 print("Screen size: {}x{}".format(pyautogui_window_width, pyautogui_window_height))
 
-with EasyProcess(["xmessage", "hello"*30]) as proc:
-    # wait until something is displayed on the virtual display (polling method)
-    # and then take a fullscreen screenshot
-    # and then crop it. Background is black.
-    img = display.waitgrab()
-    x, y = pyautogui.locateCenterOnScreen(image='ok1.png', confidence=0.9)
+p = EasyProcess([python, 'script.py'])
+p.start()
+p.sleep(1)
+x, y = pyautogui.locateCenterOnScreen(image='g.png', confidence=0.9)
+print(x, y)
 
-    print(x, y)
-    pyautogui.moveTo(x, y)
-    pyautogui.click()
-    proc.wait()
+pyautogui.moveTo(x, y)
+pyautogui.click()
 
+p.stop()
 
 display.stop()
 print('>>> All done.')
