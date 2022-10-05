@@ -4,7 +4,8 @@ pyautogui demo with and without display
 
 ## Install
 
-`pip install -r requirements.txt`
+- `pip install -r requirements.txt`
+- `sudo apt install firefox-geckodriver`
 
 ## Run
 
@@ -12,3 +13,5 @@ pyautogui demo with and without display
 
 - visible=True (with display)
 - visible=False (wo display)
+
+`python browser_demo.py`

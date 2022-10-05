@@ -6,6 +6,7 @@ from time import sleep
 # pip3 install selenium==4.2.0
 
 from selenium import webdriver
+
 from pyvirtualdisplay.smartdisplay import SmartDisplay
 
 # pour visible=1, installer xserver-xephyr
